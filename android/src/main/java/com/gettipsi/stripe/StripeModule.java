@@ -201,6 +201,7 @@ public class StripeModule extends ReactContextBaseJavaModule {
 
       mStripe.createCardToken(
         createCard(cardData),
+        null,
         mPublicKey,
         new ApiResultCallback<Token>() {
           public void onSuccess(Token token) {

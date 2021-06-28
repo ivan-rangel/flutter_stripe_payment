@@ -201,8 +201,8 @@ public class StripeModule extends ReactContextBaseJavaModule {
 
       mStripe.createCardToken(
         createCard(cardData),
-        null,
-        mPublicKey,
+        //! FIX IDEMPOTENCY ERROR - JUN 27, 21
+        // mPublicKey,
         new ApiResultCallback<Token>() {
           public void onSuccess(Token token) {
             promise.resolve(convertTokenToWritableMap(token));
